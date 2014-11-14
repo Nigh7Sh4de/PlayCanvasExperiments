@@ -1,4 +1,4 @@
 PlayCanvasExperiments
 =====================
 
-Just some small experiments with the PlayCanvas graphics engine
+Just some small experiments with the PlayCanvas graphics engine 
