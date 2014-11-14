@@ -1,6 +1,8 @@
 // Create a PlayCanvas application
 var canvas = document.getElementById("application-canvas");
 var app = new pc.fw.Application(canvas, {});
+var keyboard = new pc.input.Keyboard(window); 
+
 app.start();
 
 // Fill the available space at full resolution
@@ -9,8 +11,9 @@ app.setCanvasResolution(pc.fw.ResolutionMode.AUTO);
 
 // Create box entity
 var e = new pc.fw.Entity();
+
 app.context.systems.model.addComponent(e, {
-type: "box",
+	type: "box",
 });
 
 var material = new pc.scene.PhongMaterial();
@@ -44,6 +47,17 @@ light.setEulerAngles(45, 0, 0);
 // Register an update event
 app.on("update", function (dt) {
 	
-	
+	if (keyboard.isPressed(pc.input.KEY_LEFT)) {
+		e.translate(-2*dt,0,0);
+	}
+	if (keyboard.isPressed(pc.input.KEY_RIGHT)) {
+		e.translate(+2*dt,0,0);
+	}
+	if (keyboard.isPressed(pc.input.KEY_UP)) {
+		e.translate(0,+2*dt,0);
+	}
+	if (keyboard.isPressed(pc.input.KEY_DOWN)) {
+		e.translate(0, -2*dt,0);
+	}
 
 });
