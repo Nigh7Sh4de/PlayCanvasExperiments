@@ -36,13 +36,10 @@
 			}
 		},
 		{
-			"contents": "// Create a PlayCanvas application\nvar canvas = document.getElementById(\"application-canvas\");\nvar app = new pc.fw.Application(canvas, {});\nvar keyboard = new pc.input.Keyboard(window); \n\napp.start();\n\n// Fill the available space at full resolution\napp.setCanvasFillMode(pc.fw.FillMode.FILL_WINDOW);\napp.setCanvasResolution(pc.fw.ResolutionMode.AUTO);\n\n// Create box entity\nvar e = new pc.fw.Entity();\n\napp.context.systems.model.addComponent(e, {\n	type: \"box\",\n});\n\nvar material = new pc.scene.PhongMaterial();\nmaterial.diffuse = new pc.Color(1.0, 0.2, 1.0, 1.0);\nmaterial.update();\n\ne.model.material = material;\n\n\n// Create camera entity\nvar cam = new pc.fw.Entity();\n	app.context.systems.camera.addComponent(cam, {\nclearColor: [0.3,0.3,0.3]\n});\n\n// Create directional light entity\nvar light = new pc.fw.Entity();\n	app.context.systems.light.addComponent(light, {\ncolor: new pc.Color(1,1,1)\n});\n\n\n//Create a skybox for the environment\nvar forest_wall_file = {\n	filename: 'forest.jpg',\n	url: '/assets/forest.jpg'\n}\n\nvar forest_wall = new pc.asset\n\nvar skybox = new pc.fw.Entity();\napp.context.systems.model.addComponent(skybox, {\n	enabled: 'true',\n	negx: \n});\n\n// Add to hierarchy\napp.context.root.addChild(e);\napp.context.root.addChild(cam);\napp.context.root.addChild(light);\n\n// Set up position and orientation\ncam.setLocalPosition(0, 0, 5);\ncam.setEulerAngles(0,0,0);\nlight.setEulerAngles(45, 0, 0);\n\n// Register an update event\napp.on(\"update\", function (dt) {\n	\n	if (keyboard.isPressed(pc.input.KEY_A)) {\n		e.translate(-2*dt,0,0);\n	}\n	if (keyboard.isPressed(pc.input.KEY_D)) {\n		e.translate(+2*dt,0,0);\n	}\n	if (keyboard.isPressed(pc.input.KEY_W)) {\n		e.translate(0,0, -2*dt);\n	}\n	if (keyboard.isPressed(pc.input.KEY_S)) {\n		e.translate(0, 0, 2*dt);\n	}\n\n	if (keyboard.isPressed(pc.input.KEY_UP)) {\n		cam.rotate(1,0,0);		\n	}\n	if (keyboard.isPressed(pc.input.KEY_DOWN)) {\n		cam.rotate(-1,0,0);		\n	}\n	if (keyboard.isPressed(pc.input.KEY_LEFT)) {\n		cam.rotate(0,1,0);		\n	}\n	if (keyboard.isPressed(pc.input.KEY_RIGHT)) {\n		cam.rotate(0,-1,0);		\n	}\n});\n",
 			"file": "app.js",
-			"file_size": 2107,
-			"file_write_time": 130605799251960342,
 			"settings":
 			{
-				"buffer_size": 2050,
+				"buffer_size": 2117,
 				"line_ending": "Windows"
 			}
 		},
@@ -50,17 +47,8 @@
 			"file": "/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/User/javascript.sublime-completions",
 			"settings":
 			{
-				"buffer_size": 2464,
+				"buffer_size": 2494,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "\"pc.input.KEY_BACKSPACE\",\n\"pc.input.KEY_TAB\",\n\"pc.input.KEY_RETURN\",\n\"pc.input.KEY_ENTER\",\n\"pc.input.KEY_SHIFT\",\n\"pc.input.KEY_CONTROL\",\n\"pc.input.KEY_ALT\",\n\"pc.input.KEY_PAUSE\",\n\"pc.input.KEY_CAPS_LOCK\",\n\"pc.input.KEY_ESCAPE\",\n\"pc.input.KEY_SPACE\",\n\"pc.input.KEY_PAGE_UP\",\n\"pc.input.KEY_PAGE_DOWN\",\n\"pc.input.KEY_END\",\n\"pc.input.KEY_HOME\",\n\"pc.input.KEY_LEFT\",\n\"pc.input.KEY_UP\",\n\"pc.input.KEY_RIGHT\",\n\"pc.input.KEY_DOWN\",\n\"pc.input.KEY_PRINT_SCREEN\",\n\"pc.input.KEY_INSERT\",\n\"pc.input.KEY_DELETE\",\n\"pc.input.KEY_0\",\n\"pc.input.KEY_1\",\n\"pc.input.KEY_2\",\n\"pc.input.KEY_3\",\n\"pc.input.KEY_4\",\n\"pc.input.KEY_5\",\n\"pc.input.KEY_6\",\n\"pc.input.KEY_7\",\n\"pc.input.KEY_8\",\n\"pc.input.KEY_9\",\n\"pc.input.KEY_SEMICOLON\",\n\"pc.input.KEY_EQUAL\",\n\"pc.input.KEY_A\",\n\"pc.input.KEY_B\",\n\"pc.input.KEY_C\",\n\"pc.input.KEY_D\",\n\"pc.input.KEY_E\",\n\"pc.input.KEY_F\",\n\"pc.input.KEY_G\",\n\"pc.input.KEY_H\",\n\"pc.input.KEY_I\",\n\"pc.input.KEY_J\",\n\"pc.input.KEY_K\",\n\"pc.input.KEY_L\",\n\"pc.input.KEY_M\",\n\"pc.input.KEY_N\",\n\"pc.input.KEY_O\",\n\"pc.input.KEY_P\",\n\"pc.input.KEY_Q\",\n\"pc.input.KEY_R\",\n\"pc.input.KEY_S\",\n\"pc.input.KEY_T\",\n\"pc.input.KEY_U\",\n\"pc.input.KEY_V\",\n\"pc.input.KEY_W\",\n\"pc.input.KEY_X\",\n\"pc.input.KEY_Y\",\n\"pc.input.KEY_Z\",\n\"pc.input.KEY_WINDOWS\",\n\"pc.input.KEY_CONTEXT_MENU\",\n\"pc.input.KEY_NUMPAD_0\",\n\"pc.input.KEY_NUMPAD_1\",\n\"pc.input.KEY_NUMPAD_2\",\n\"pc.input.KEY_NUMPAD_3\",\n\"pc.input.KEY_NUMPAD_4\",\n\"pc.input.KEY_NUMPAD_5\",\n\"pc.input.KEY_NUMPAD_6\",\n\"pc.input.KEY_NUMPAD_7\",\n\"pc.input.KEY_NUMPAD_8\",\n\"pc.input.KEY_NUMPAD_9\",\n\"pc.input.KEY_MULTIPLY\",\n\"pc.input.KEY_ADD\",\n\"pc.input.KEY_SEPARATOR\",\n\"pc.input.KEY_SUBTRACT\",\n\"pc.input.KEY_DECIMAL\",\n\"pc.input.KEY_DIVIDE\",\n\"pc.input.KEY_F1\",\n\"pc.input.KEY_F2\",\n\"pc.input.KEY_F3\",\n\"pc.input.KEY_F4\",\n\"pc.input.KEY_F5\",\n\"pc.input.KEY_F6\",\n\"pc.input.KEY_F7\",\n\"pc.input.KEY_F8\",\n\"pc.input.KEY_F9\",\n\"pc.input.KEY_F10\",\n\"pc.input.KEY_F11\",\n\"pc.input.KEY_F12\",\n\"pc.input.KEY_COMMA\",\n\"pc.input.KEY_PERIOD\",\n\"pc.input.KEY_SLASH\",\n\"pc.input.KEY_OPEN_BRACKET\",\n\"pc.input.KEY_BACK_SLASH\",\n\"pc.input.KEY_CLOSE_BRACKET\",\n\"pc.input.KEY_META \",",
-			"settings":
-			{
-				"buffer_size": 2046,
-				"line_ending": "Windows",
-				"name": "\"pc.input.KEY_BACKSPACE\","
 			}
 		},
 		{
@@ -133,7 +121,9 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/TravellingCube/app.js",
 		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/User/javascript.sublime-completions",
+		"/C/Users/Nigh7Sh4de/Downloads/Hex_Plating.png",
 		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
 		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/MovingCube/app.js",
 		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
@@ -141,7 +131,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -155,6 +145,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"e.",
 			"5"
 		],
 		"highlight": true,
@@ -173,7 +164,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -189,8 +180,8 @@
 						"selection":
 						[
 							[
-								86,
-								86
+								0,
+								443
 							]
 						],
 						"settings":
@@ -210,26 +201,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2050,
+						"buffer_size": 2117,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1045,
-								1045
+								512,
+								512
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 18.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -238,58 +230,31 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2464,
+						"buffer_size": 2494,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2393,
-								2393
+								2488,
+								2488
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 1075.0,
+						"translation.x": -0.0,
+						"translation.y": 922.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2046,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								2046
-							]
-						],
-						"settings":
-						{
-							"auto_name": "\"pc.input.KEY_BACKSPACE\",",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1075.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "style.css",
 					"semi_transient": false,
 					"settings":
@@ -302,7 +267,7 @@
 						[
 							[
 								0,
-								0
+								76
 							]
 						],
 						"settings":
@@ -313,7 +278,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
