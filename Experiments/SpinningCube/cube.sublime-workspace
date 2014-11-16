@@ -4,60 +4,12 @@
 		"selected_items":
 		[
 			[
-				"backgr",
-				"background-size"
+				"sri",
+				"script"
 			],
 			[
-				"frm",
-				"fragmentShader"
-			],
-			[
-				"Ve",
-				"VertexSource"
-			],
-			[
-				"frag",
-				"fragmentShader"
-			],
-			[
-				"Frag",
-				"fragmentSource"
-			],
-			[
-				"Fragm",
-				"FragmentShader"
-			],
-			[
-				"fragment",
-				"fragmentSource"
-			],
-			[
-				"col",
-				"colAttrib"
-			],
-			[
-				"shad",
-				"shaderProgram"
-			],
-			[
-				"tri",
-				"triangleColor"
-			],
-			[
-				"pr",
-				"println"
-			],
-			[
-				"getFon",
-				"getFontMetrics"
-			],
-			[
-				"mon",
-				"moneyIncrement"
-			],
-			[
-				"img_b",
-				"img_base_dir"
+				"scr",
+				"SCRIPT"
 			]
 		]
 	},
@@ -80,6 +32,14 @@
 			}
 		},
 		{
+			"file": "/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 64,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "style.css",
 			"settings":
 			{
@@ -88,23 +48,15 @@
 			}
 		}
 	],
-	"build_system": "Packages/User/Chrome.sublime-build",
+	"build_system": "",
 	"command_palette":
 	{
-		"height": 127.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
 				"instal",
 				"Package Control: Install Package"
-			],
-			[
-				"html",
-				"HTML: Wrap Selection With Tag"
-			],
-			[
-				"prettify",
-				"HTMLPrettify"
 			],
 			[
 				"install",
@@ -115,91 +67,27 @@
 				"Package Control: Install Package"
 			],
 			[
-				"push",
-				"Git: Push"
+				"goto",
+				"Emmet: Go to Matching Pair"
 			],
 			[
-				"commit",
-				"Git: Commit"
+				"java",
+				"Javascript Beautify"
 			],
 			[
-				"git commit",
-				"Git: Commit"
-			],
-			[
-				"git die",
-				"Git: Diff Staged"
-			],
-			[
-				"git add",
-				"Git: Add Selected Hunk"
-			],
-			[
-				"word",
-				"Word Wrap: Toggle"
-			],
-			[
-				"instl",
-				"Package Control: Install Package"
-			],
-			[
-				"snip",
-				"Snippet: html"
-			],
-			[
-				"snippet",
-				"Snippet: html"
-			],
-			[
-				"sublimecl",
-				"Preferences: SublimeClang Settings – User"
-			],
-			[
-				"stop",
-				"SublimeGDB: Stop Debugging"
-			],
-			[
-				"glsl",
-				"Set Syntax: GLSL"
-			],
-			[
-				"c++",
-				"Set Syntax: C++"
-			],
-			[
-				"install ",
-				"Package Control: Install Package"
-			],
-			[
-				"save ",
-				"File: Save All"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"debug",
-				"SublimeGDB: Stop Debugging"
-			],
-			[
-				"gdb set",
-				"Preferences: SublimeGDB Settings – User"
-			],
-			[
-				"gdb",
-				"Preferences: SublimeGDB Settings – Default"
+				"json",
+				"JSON Reindent: reindent file or selection"
 			]
 		],
 		"width": 416.0
 	},
 	"console":
 	{
-		"height": 125.0
+		"height": 216.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
 	},
 	"distraction_free":
 	{
@@ -210,99 +98,24 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/Nigh7Sh4de/Programming/Github/PlayCanvasExperiments/Experiments/SpinningCube"
+	],
 	"file_history":
 	[
-		"/C/Users/Nigh7Sh4de/Programming/Github/Nigh7Tun3s/Nigh7Tun3s/www/lib/blur.js",
-		"/C/Users/Nigh7Sh4de/Programming/Github/Nigh7Tun3s/Nigh7Tun3s/www/js/blur.js",
-		"/C/Users/Nigh7Sh4de/Programming/Github/Nigh7Tun3s/Nigh7Tun3s/www/img/ionic.png",
-		"/C/Users/Nigh7Sh4de/Programming/Github/Nigh7Tun3s/Nigh7Tun3s/www/index.html.bak",
-		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 2/Packages/User/Chrome.sublime-build",
-		"/C/Users/Nigh7Sh4de/Programming/Github/Nigh7Tun3s/Nigh7Tun3s/www/compile.bat",
-		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 2/Packages/SublimeGDB/SublimeGDB.sublime-settings",
-		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 2/Packages/User/SublimeGDB.sublime-settings",
-		"/C/Users/Nigh7Sh4de/Programming/Github/Nigh7Tun3s/compile.bat",
-		"/C/Users/Nigh7Sh4de/Desktop/Phonegap/myApp/www/index.html",
-		"/C/Users/Nigh7Sh4de/Desktop/poop.java",
-		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 2/Packages/User/html5.sublime-snippet",
-		"/C/Users/Nigh7Sh4de/Desktop/HTML5App/main.htm",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/cube.sublime-project",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/include/GL/_mingw.h",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/include/GL/windows.h",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/include/GL/gl.h",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/include/GL/glu.h",
-		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 2/Packages/User/SublimeClang.sublime-settings",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/src/poop.java",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/bin/VertexSource.glsl",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/src/FragmentSource.glsl",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/bin/FragmentSource.glsl",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/include/GLSLTools.h",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/include/GLSLTools.cpp",
-		"/C/Users/Nigh7Sh4de/Programming/Github/OpenGL/Projects/Cube/src/VertexSource.glsl",
-		"/C/Users/Nigh7Sh4de/Programming/OpenGL/Test003/test003.sublime-project",
-		"/C/Users/Nigh7Sh4de/Programming/OpenGL/Test002/test002.sublime-project",
-		"/C/Users/Nigh7Sh4de/Programming/OpenGL/Test003/test003.sublime-workspace",
-		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 2/Packages/SublimeGDB/sublimegdb.py",
-		"/C/Users/Nigh7Sh4de/Downloads/pentagram-159044_640.png",
-		"/C/Users/Nigh7Sh4de/Github/OpenGL/Nigh7Sh4de/v0.1 - Copy/src/main.cpp",
-		"/E/bootmgr.efi",
-		"/C/Users/Dennis/Desktop/test1/test1.sublime-project",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/SublimeGDB/SublimeGDB.sublime-settings",
-		"/C/Users/Dennis/Desktop/test1/main.cpp",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/User/SublimeGDB.sublime-settings",
-		"/C/Users/Dennis/Github/OpenGL/Open.GL/C2_0/compile.bat",
-		"/C/Users/Dennis/Github/OpenGL/Open.GL/C2_0/src/main.cpp",
-		"/C/Users/Dennis/Desktop/hello.cpp",
-		"/C/Users/Dennis/Github/OpenGL/Projects/Earth/compile.bat",
-		"/C/Users/Dennis/Github/OpenGL/Projects/Mercury/compile.bat",
-		"/C/Users/Dennis/AppData/Local/Temp/Temp1_SFML-2.1-windows-gcc-4.7-mingw-32bits.zip/SFML-2.1/include/SFML/Graphics/BlendMode.hpp",
-		"/C/Users/Dennis/AppData/Local/Temp/Temp1_SFML-2.1-windows-gcc-4.7-mingw-32bits.zip/SFML-2.1/include/SFML/Graphics.hpp",
-		"/C/Users/Dennis/Github/OpenGL/Open.GL/C1/compile.bat",
-		"/C/Users/Dennis/Github/OpenGL/Open.GL/C1/src/main.cpp",
-		"/C/Users/Dennis/SkyDrive/Carl.bat",
-		"/C/Users/Dennis/AppData/Local/Temp/Temp1_SFML-2.1-windows-gcc-4.7-mingw-32bits.zip/SFML-2.1/examples/opengl/OpenGL.cpp",
-		"/C/Users/Dennis/SkyDrive/CCC/2014/Round 1/s5.java",
-		"/C/Users/Dennis/SkyDrive/CCC/2014/Round 1/hello.txt",
-		"/C/Users/Dennis/SkyDrive/CCC/2014/Round 1/ex0.cpp",
-		"/E/syslinux/boot.cat",
-		"/C/Users/Dennis/Downloads/darkc0de.lst",
-		"/C/Users/Dennis/SkyDrive/OLD/ICS3U1/Java/Performance Tasks/ISU/run.cpp",
-		"/C/Users/Dennis/SkyDrive/OLD/ICS3U1/Java/Performance Tasks/ISU/dragon5.java",
-		"/C/Users/Dennis/Github/ICS4U1/Java/ISU/src/Commander.java",
-		"/C/Users/Dennis/Github/ICS4U1/Java/ISU/src/Player.java",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/User/Compile.bat.sublime-build",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/Haskell/Haskell.sublime-build",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/Java/JavaC.sublime-build",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/Python/Python.sublime-build",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/User/thread-java.sublime-snippet",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/User/thread-snippet.sublime-snippet",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/HTML/html.sublime-snippet",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/Emmet/Default.sublime-commands",
-		"/C/Users/Dennis/ADT/workspace/TestApplet/bin/java.policy.applet",
-		"/C/Users/Dennis/ADT/workspace/TestApplet/.classpath",
-		"/C/Users/Dennis/SkyDrive/OLD/ICS3U1/Java/Performance Tasks/ISU/dragon4.java",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/ISU/src/stuff.html",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/ISU/Hellfire.html",
-		"/C/Users/Dennis/AppData/Roaming/Sublime Text 2/Packages/Java/Ant.sublime-build",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/ISU/classes/Hellfire.html",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/Java/Chapter 9/Exercise 3/Program.java",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/Java/Chapter 9/Exercise 3/Car.java",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/Java/Chapter 9/Exercise 3/Minivan.java",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/Java/Chapter 9/Exercise 3/Truck.java",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/Java/Chapter 9/Exercise 3/Vehicle.java",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/Java/Chapter 9/Exercise 1/UEmployee.java",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/Java/Chapter 9/Exercise 1/Staff.java",
-		"/C/Users/Dennis/SkyDrive/School/G12-S1/ICS4U1/Java/Chapter 9/Exercise 1/Faculty.java"
+		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 2/Packages/Browser Refresh/Default (Windows).sublime-keymap"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
 		"height": 0.0,
 		"where_history":
 		[
-			""
 		]
 	},
 	"find_state":
@@ -310,117 +123,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"dock-controls",
-			"img/none",
-			"none",
-			"gl/glu.h",
-			"fragmentsource",
-			"endl",
-			"pos",
-			"vertex",
-			"gdb",
-			"RGB",
-			");\n",
-			"hellow",
-			"System.out.",
-			"4",
-			"System.out.println(",
-			"N/2",
-			"x",
-			"//",
-			"System",
-			"System.out.print",
-			"System.out.println",
-			"fnt_main_size",
-			" Angel",
-			" Demon",
-			"status",
-			"d_taken.remove",
-			"ke.",
-			"demon",
-			"angel",
-			"demon",
-			"())",
-			"System.out.print",
-			"stun",
-			"stunn",
-			"explode",
-			"explode = ",
-			"c.stunned",
-			"demon",
-			"System",
-			"Syste",
-			"System.out.print",
-			"liv: ",
-			"system.out",
-			"System.out",
-			"System.ot",
-			"System.out.println",
-			"size()",
-			"S*.size()",
-			"System.out*.size()",
-			"atking = ",
-			"atking.add(",
-			"System.out.p",
-			"moving.add(",
-			"atking.removeElement",
-			"System",
-			"System.out.",
-			"System.out",
-			"System.ou",
-			"commander = new Comma",
-			"addBase",
-			"demon",
-			"small",
-			"s1",
-			"System",
-			"System.",
-			"System.out.println",
-			"commander",
-			"System.out",
-			"main",
-			"commander",
-			"element(",
-			"c.",
-			"System.out",
-			"System.out.println()\\",
-			"small(this)",
-			".small()",
-			"\n		",
-			"mds",
-			"System.out.println",
-			"++",
-			"movSpeed",
-			"pos =",
-			"taken.add",
-			"creatures",
-			"i",
-			"movSpeed",
-			"line",
-			"private",
-			"destroy",
-			"	\n",
-			"main.java",
-			"dx",
-			"dim",
-			"repaint()",
-			"fps",
-			"drawString(\"",
-			"base",
-			"classes",
-			"stuff",
-			"res\\",
-			"res/",
-			"res",
-			"private",
-			"public",
-			"}\n",
-			"year",
-			"}\n",
-			"	}",
-			"o",
-			"user.next()",
-			"Sysetm"
+			"5"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -428,31 +131,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"col",
-			"fragment",
-			"RGBA",
-			"n",
-			"",
-			"KeyEvent.",
-			"p",
-			"angel",
-			"greater",
-			"supreme",
-			"greater",
-			"d.",
-			"small()",
-			".small(this)",
-			"mbtn",
-			"mas",
-			"t",
-			"pos",
-			"protected",
-			"cx",
-			"getSize()",
-			"bin",
-			"classes",
-			"user.nextLine()",
-			"System"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -469,6 +147,7 @@
 				{
 					"buffer": 0,
 					"file": "index.htm",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 441,
@@ -478,24 +157,25 @@
 						"selection":
 						[
 							[
-								13,
-								13
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"word_wrap": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
-						"translation.x": 41.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "app.js",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 1162,
@@ -505,23 +185,159 @@
 						"selection":
 						[
 							[
-								580,
-								581
+								494,
+								494
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"nodePath": "node",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 363.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 64,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "style.css",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 76,
@@ -531,8 +347,8 @@
 						"selection":
 						[
 							[
-								73,
-								73
+								0,
+								0
 							]
 						],
 						"settings":
@@ -543,6 +359,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -550,11 +367,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 39.0
+		"height": 26.0
 	},
 	"input":
 	{
-		"height": 38.0
+		"height": 0.0
 	},
 	"layout":
 	{
@@ -579,25 +396,14 @@
 		]
 	},
 	"menu_visible": true,
-	"output.clang":
-	{
-		"height": 118.0
-	},
-	"output.clang_static_analyzer":
+	"output.find_results":
 	{
 		"height": 0.0
 	},
-	"output.exec":
-	{
-		"height": 30.0
-	},
-	"output.git":
-	{
-		"height": 188.0
-	},
+	"project": "cube.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -605,33 +411,36 @@
 		"height": 0.0,
 		"selected_items":
 		[
-			[
-				"glsl",
-				"include/GLSLTools.cpp"
-			],
-			[
-				"vertex",
-				"bin/VertexSource.glsl"
-			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 500.0,
+		"height": 0.0,
 		"selected_items":
 		[
-			[
-				"",
-				"/C/Users/Nigh7Sh4de/Programming/OpenGL/Test003/test003.sublime-project"
-			]
 		],
-		"width": 380.0
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 132.0,
-	"status_bar_visible": true
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }
