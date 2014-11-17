@@ -4,10 +4,6 @@
 		"selected_items":
 		[
 			[
-				"translate",
-				"translateByVector"
-			],
-			[
 				"hex_",
 				"Hex_Plating_s"
 			],
@@ -51,7 +47,7 @@
 			"file": "index.htm",
 			"settings":
 			{
-				"buffer_size": 411,
+				"buffer_size": 331,
 				"line_ending": "Windows"
 			}
 		},
@@ -59,7 +55,15 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 3540,
+				"buffer_size": 3461,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/User/javascript.sublime-completions",
+			"settings":
+			{
+				"buffer_size": 2577,
 				"line_ending": "Windows"
 			}
 		},
@@ -128,17 +132,14 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube"
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/TravellingCube",
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/TravellingCube/assets"
 	],
 	"file_history":
 	[
-		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube/README.txt",
-		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube/app.js",
-		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube/index.htm",
-		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/TravellingCube/app.js",
-		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube/style.css",
 		"/C/Users/Nigh7Sh4de/Downloads/Cube/data.js",
 		"/C/Users/Nigh7Sh4de/Downloads/Cube/index.html",
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/TravellingCube/app.js",
 		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/User/javascript.sublime-completions",
 		"/C/Users/Nigh7Sh4de/Downloads/Hex_Plating.png",
 		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
@@ -162,12 +163,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"consol",
-			"console.l",
-			"direction",
-			"	\n",
-			"box",
-			"5",
 			"1247759",
 			"e.",
 			"5"
@@ -178,7 +173,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"cone"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -198,15 +192,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 411,
+						"buffer_size": 331,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								411
+								15,
+								15
 							]
 						],
 						"settings":
@@ -226,15 +220,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3540,
+						"buffer_size": 3461,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1925,
-								1925
+								472,
+								472
 							]
 						],
 						"settings":
@@ -243,7 +237,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 702.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -251,6 +245,35 @@
 				},
 				{
 					"buffer": 2,
+					"file": "/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/User/javascript.sublime-completions",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2577,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								287,
+								287
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "style.css",
 					"semi_transient": false,
 					"settings":
@@ -274,7 +297,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -315,10 +338,10 @@
 	{
 		"height": 0.0
 	},
-	"project": "forward.sublime-project",
+	"project": "tcube.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
