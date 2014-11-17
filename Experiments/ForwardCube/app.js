@@ -17,69 +17,17 @@ app.context.loader._handlers['texture'].crossOrigin = 'anonymous';
 //Create skybox entity
 var skybox = new pc.fw.Entity();
 
-var up = new pc.asset.Asset('up', "texture", {
-	url: 'assets/space_up.png'
-});
-var down = new pc.asset.Asset('down', "texture", {
-	url: 'assets/space_down.png'
-});
-var left = new pc.asset.Asset('left', "texture", {
-	url: 'assets/space_left.png'
-});
-var right = new pc.asset.Asset('right', "texture", {
-	url: 'assets/space_right.png'
-});
-var back = new pc.asset.Asset('back', "texture", {
-	url: 'assets/space_back.png'
-});
-var front = new pc.asset.Asset('front', "texture", {
-	url: 'assets/space_front.png'
-});
-
-
-app.context.assets.addAsset(up);
-app.context.assets.addAsset(down);
-app.context.assets.addAsset(left);
-app.context.assets.addAsset(right);
-app.context.assets.addAsset(front);
-app.context.assets.addAsset(back);
-
-app.context.systems.skybox.addComponent(skybox, {
-	enabled: true,
-	posx: right.id,
-	negx: left.id,
-	posy: up.id,
-	negy: down.id,
-	posz: front.id,
-	negz: back.id
-});	
-
 //Create cone entity
 var cone = new pc.fw.Entity();
 app.context.systems.model.addComponent(cone, {
 	type: "cone",
 });
 
-var material = new pc.scene.PhongMaterial();
-material.diffuse = new pc.Color(1.0, 0.2, 1.0, 1.0);
-material.update();
-
-cone.model.material = material;
-
 //Create floor entity
 var floor = new pc.fw.Entity();
 app.context.systems.model.addComponent(floor, {
 	type: "box",
 });
-
-app.context.assets.loadFromUrl("assets/Hex_Plating.png", "texture").then(function (result) {
-	var texture = result.resource[0];
-	var material = new pc.scene.PhongMaterial();
-	material.diffuseMap = texture;
-	material.update();
-	floor.model.model.meshInstances[0].material = material;
-});
-
 
 // Create camera entity
 var cam = new pc.fw.Entity();
@@ -92,6 +40,50 @@ var light = new pc.fw.Entity();
 app.context.systems.light.addComponent(light, {
 	color: new pc.Color(1,1,1)
 });
+
+
+// load all textures
+var textures = [
+    "assets/space_up.png",
+    "assets/space_down.png",
+    "assets/space_left.png",
+    "assets/space_right.png",
+    "assets/space_front.png",
+    "assets/space_back.png",
+    "assets/Hex_Plating.png"
+];
+
+var promises = [];
+
+for (var i = 0; i < textures.length; i++) {
+  promises.push(app.context.assets.loadFromUrl(textures[i], "texture"));
+}
+
+// check for all assets to load then create skybox
+pc.promise.all(promises).then(function (results) {
+
+	var floorMaterial = new pc.scene.PhongMaterial();
+	floorMaterial.diffuseMap = results[6].resource[0];
+	floorMaterial.update();
+	floor.model.model.meshInstances[0].material = floorMaterial;
+
+	var coneMaterial = new pc.scene.PhongMaterial();
+	coneMaterial.diffuse = new pc.Color(1.0, 0.2, 1.0, 1.0);
+	coneMaterial.update();
+
+	cone.model.material = coneMaterial;
+
+	app.context.systems.skybox.addComponent(skybox, {
+		enabled: true,
+		posx: results[0].asset.id,
+		negx: results[1].asset.id,
+		posy: results[2].asset.id,
+		negy: results[3].asset.id,
+		posz: results[4].asset.id,
+		negz: results[5].asset.id
+	});	
+});
+
 
 // Add to hierarchy
 app.context.root.addChild(cone);
