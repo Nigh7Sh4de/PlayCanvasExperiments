@@ -11,6 +11,9 @@ app.setCanvasResolution(pc.fw.ResolutionMode.AUTO);
 
 app.context.scene.ambientLight = new pc.Color(0.2, 0.2, 0.2);
 
+// Bit of hack to enable crossOrigin texure loading
+app.context.loader._handlers['texture'].crossOrigin = 'anonymous';
+
 //Create skybox entity
 var skybox = new pc.fw.Entity();
 

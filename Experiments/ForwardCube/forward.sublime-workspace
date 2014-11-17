@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"translate",
+				"translateByVector"
+			],
+			[
 				"hex_",
 				"Hex_Plating_s"
 			],
@@ -43,6 +47,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 3636,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -98,11 +110,18 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube"
+	],
 	"file_history":
 	[
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube/index.htm",
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/TravellingCube/app.js",
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube/style.css",
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube/README.txt",
 		"/C/Users/Nigh7Sh4de/Downloads/Cube/data.js",
 		"/C/Users/Nigh7Sh4de/Downloads/Cube/index.html",
-		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/TravellingCube/app.js",
 		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/User/javascript.sublime-completions",
 		"/C/Users/Nigh7Sh4de/Downloads/Hex_Plating.png",
 		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
@@ -126,6 +145,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"consol",
+			"console.l",
+			"direction",
+			"	\n",
+			"box",
+			"5",
 			"1247759",
 			"e.",
 			"5"
@@ -136,6 +161,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"cone"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -146,8 +172,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								367,
+								367
+							]
+						],
+						"settings":
+						{
+							"nodePath": "node",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -189,7 +246,7 @@
 	"project": "forward.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
