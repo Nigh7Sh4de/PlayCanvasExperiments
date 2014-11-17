@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"hex_",
+				"Hex_Plating_s"
+			],
+			[
+				"HEX_P",
+				"Hex_Plating_s"
+			],
+			[
+				"KEY_U",
+				"pc.input.KEY_UP"
+			],
+			[
+				"KEY_r",
+				"pc.input.KEY_RIGHT"
+			],
+			[
 				"KEY_L",
 				"pc.input.KEY_LEFT"
 			],
@@ -31,7 +47,7 @@
 			"file": "index.htm",
 			"settings":
 			{
-				"buffer_size": 443,
+				"buffer_size": 331,
 				"line_ending": "Windows"
 			}
 		},
@@ -39,7 +55,7 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 2117,
+				"buffer_size": 3461,
 				"line_ending": "Windows"
 			}
 		},
@@ -47,7 +63,7 @@
 			"file": "/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/User/javascript.sublime-completions",
 			"settings":
 			{
-				"buffer_size": 2494,
+				"buffer_size": 2577,
 				"line_ending": "Windows"
 			}
 		},
@@ -63,9 +79,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 58.0,
+		"height": 81.0,
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
 			[
 				"remove",
 				"Package Control: Remove Package"
@@ -79,20 +103,12 @@
 				"Package Control: Install Package"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"goto",
 				"Emmet: Go to Matching Pair"
 			],
 			[
 				"java",
 				"Javascript Beautify"
-			],
-			[
-				"json",
-				"JSON Reindent: reindent file or selection"
 			]
 		],
 		"width": 416.0
@@ -121,6 +137,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Nigh7Sh4de/Downloads/Cube/data.js",
+		"/C/Users/Nigh7Sh4de/Downloads/Cube/index.html",
 		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/TravellingCube/app.js",
 		"/C/Users/Nigh7Sh4de/AppData/Roaming/Sublime Text 3/Packages/User/javascript.sublime-completions",
 		"/C/Users/Nigh7Sh4de/Downloads/Hex_Plating.png",
@@ -145,6 +163,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"1247759",
 			"e.",
 			"5"
 		],
@@ -173,15 +192,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 443,
+						"buffer_size": 331,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								443
+								15,
+								15
 							]
 						],
 						"settings":
@@ -192,7 +211,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -201,15 +220,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2117,
+						"buffer_size": 3461,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								512,
-								512
+								472,
+								472
 							]
 						],
 						"settings":
@@ -230,15 +249,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2494,
+						"buffer_size": 2577,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2488,
-								2488
+								287,
+								287
 							]
 						],
 						"settings":
@@ -246,11 +265,11 @@
 							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 922.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -278,7 +297,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
