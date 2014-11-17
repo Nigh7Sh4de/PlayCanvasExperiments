@@ -119,10 +119,10 @@ app.on("update", function (dt) {
 		cone.rotateLocal(0, 0, -45*dt*MULT);
 	}
 	if (keyboard.isPressed(pc.input.KEY_E)) {
-		cone.rotate(+45*dt*MULT, 0, 0);
+		cone.rotateLocal(+45*dt*MULT, 0, 0);
 	}
 	if (keyboard.isPressed(pc.input.KEY_Q)) {
-		cone.rotate(-45*dt*MULT, 0, 0);
+		cone.rotateLocal(-45*dt*MULT, 0, 0);
 	}
 
 	if (keyboard.isPressed(pc.input.KEY_LEFT)) {
