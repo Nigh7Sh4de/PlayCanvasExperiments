@@ -12,16 +12,17 @@ app.setCanvasResolution(pc.fw.ResolutionMode.AUTO);
 // Create box entity
 var e = new pc.fw.Entity();
 
-app.context.systems.model.addComponent(e, {
-	type: "box",
+var url = "assets/leonardo-da-vinci-flying-machine.json";
+
+app.context.assets.loadFromUrl(url, "model").then(function (results) {
+	var model = results.resource;
+	var asset = results.asset;
+
+	app.context.systems.model.addComponent(e, {
+		type: "asset",
+		asset: asset
+	});
 });
-
-var material = new pc.scene.PhongMaterial();
-material.diffuse = new pc.Color(1.0, 0.2, 1.0, 1.0);
-material.update();
-
-e.model.material = material;
-
 
 // Create camera entity
 var cam = new pc.fw.Entity();
@@ -41,6 +42,7 @@ app.context.root.addChild(cam);
 app.context.root.addChild(light);
 
 // Set up position and orientation
+e.setLocalScale(0.001, 0.001, 0.001);
 cam.setLocalPosition(0, 0, 3);
 light.setEulerAngles(45, 0, 0);
 
@@ -48,16 +50,29 @@ light.setEulerAngles(45, 0, 0);
 app.on("update", function (dt) {
 	
 	if (keyboard.isPressed(pc.input.KEY_LEFT)) {
-		e.translate(-2*dt,0,0);
+        cam.rotateLocal(0, 90*dt, 0);
 	}
 	if (keyboard.isPressed(pc.input.KEY_RIGHT)) {
-		e.translate(+2*dt,0,0);
+        cam.rotateLocal(0, -90*dt, 0);
 	}
 	if (keyboard.isPressed(pc.input.KEY_UP)) {
-		e.translate(0,+2*dt,0);
+        cam.rotateLocal(90*dt, 0, 0);
 	}
 	if (keyboard.isPressed(pc.input.KEY_DOWN)) {
-		e.translate(0, -2*dt,0);
+        cam.rotateLocal(-90*dt, 0, 0);
 	}
+
+    if (keyboard.isPressed(pc.input.KEY_W)) {
+        cam.translateLocal(0, 0, -1*dt);
+    }
+    if (keyboard.isPressed(pc.input.KEY_S)) {
+        cam.translateLocal(0, 0, 1*dt);
+    }
+    if (keyboard.isPressed(pc.input.KEY_D)) {
+        cam.translateLocal(1*dt, 0, 0);
+    }
+    if (keyboard.isPressed(pc.input.KEY_A)) {
+        cam.translateLocal(-1*dt, 0, 0);
+    }
 
 });
