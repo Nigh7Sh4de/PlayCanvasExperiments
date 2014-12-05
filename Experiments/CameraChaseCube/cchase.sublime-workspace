@@ -48,26 +48,26 @@
 	"buffers":
 	[
 		{
-			"file": "index.htm",
-			"settings":
-			{
-				"buffer_size": 411,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 3540,
-				"line_ending": "Unix"
+				"buffer_size": 3841,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "style.css",
+			"file": "chase.js",
 			"settings":
 			{
-				"buffer_size": 76,
+				"buffer_size": 332,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.htm",
+			"settings":
+			{
+				"buffer_size": 444,
 				"line_ending": "Windows"
 			}
 		}
@@ -190,50 +190,52 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index.htm",
-					"settings":
-					{
-						"buffer_size": 411,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "app.js",
 					"settings":
 					{
-						"buffer_size": 3540,
+						"buffer_size": 3841,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								688,
-								688
+								1391,
+								1391
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2003.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "chase.js",
+					"settings":
+					{
+						"buffer_size": 332,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -243,23 +245,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "style.css",
+					"file": "index.htm",
 					"settings":
 					{
-						"buffer_size": 76,
+						"buffer_size": 444,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								76
+								96,
+								96
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

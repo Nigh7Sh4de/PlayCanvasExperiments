@@ -33,6 +33,17 @@ app.context.assets.loadFromUrl(url, "model").then(function (results) {
 	});
 });
 
+ var moveScript = {
+ 	url: 'move.js',
+ 	name: 'move'
+ }
+
+app.context.systems.script.addComponent(cone, {
+	enabled: true,
+	scripts: [moveScript]
+});
+
+
 //Create floor entity
 var floor = new pc.fw.Entity();
 app.context.systems.model.addComponent(floor, {
@@ -43,6 +54,16 @@ app.context.systems.model.addComponent(floor, {
 var cam = new pc.fw.Entity();
 app.context.systems.camera.addComponent(cam, {
 	clearColor: [0.3,0.3,0.3]
+});
+
+ var chaseScript = {
+ 	url: 'chase.js',
+ 	name: 'chase'
+ }
+
+app.context.systems.script.addComponent(cam, {
+	enabled: true,
+	scripts: [chaseScript]
 });
 
 // Create directional light entity
@@ -96,6 +117,9 @@ app.context.root.addChild(cam);
 app.context.root.addChild(light);
 app.context.root.addChild(skybox);
 
+//Set up relations
+
+
 // Set up position and orientation
 cone.setLocalPosition(0,0.5,0);
 cone.setLocalScale(0.005, 0.005, 0.005);
@@ -109,26 +133,8 @@ light.setEulerAngles(0, 0, 30);
 // Register an update event
 app.on("update", function (dt) {
 	
-	const MULT =  5;
-
-	if (keyboard.isPressed(pc.input.KEY_W)) {
-		cone.translateLocal(0, 0, +dt*MULT);
-	}
-	if (keyboard.isPressed(pc.input.KEY_S)) {
-		cone.translateLocal(0, 0, -dt*MULT);
-	}
-	if (keyboard.isPressed(pc.input.KEY_A)) {
-		cone.rotateLocal(0, +45*dt*MULT, 0);
-	}
-	if (keyboard.isPressed(pc.input.KEY_D)) {
-		cone.rotateLocal(0, -45*dt*MULT, 0);
-	}
-	if (keyboard.isPressed(pc.input.KEY_E)) {
-		cone.rotateLocal(+45*dt*MULT, 0, 0);
-	}
-	if (keyboard.isPressed(pc.input.KEY_Q)) {
-		cone.rotateLocal(-45*dt*MULT, 0, 0);
-	}
+	// console.log(cam.script.target);
+// cam.script.chase.targetName = 'cone';
 
 	if (keyboard.isPressed(pc.input.KEY_LEFT)) {
 		cam.rotate(0, 100*dt, 0);
