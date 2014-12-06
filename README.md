@@ -18,7 +18,7 @@ Fairly standard first thing to do in a 3D gaming change, it's a cube and it will
 ###Ex 2: Moving Cube
 *Codepen: http://codepen.io/Nigh7Sh4de/pen/PwodOY*
 
-Added some keyboard functionality, now you can move the cube around your screen :D
+Added some keyboard functionality, now you can move the cube around your screen :smile:
 
 **Features**
 + Keyboard Interactivity
@@ -44,3 +44,27 @@ Added a skybox and the A/D keys will now rotate Paul (which is now a cone) and E
 + Cross origin image loading (not visible in the CodePen AND you HAVE TO use HTTP:// you cannot use file:/// even if the image is in the SAME directory as your other stuff)
 + Local translation and rotation (subjective to current orientation of Entity)
 
+###Ex 5: Model Cube
+*Codepen: http://codepen.io/Nigh7Sh4de/pen/ZYQBmJ note that you cannot see anything since the model isn't referenced correctly. The code DOES work if you download it.*
+
+Paul is now a beautiful Leonardo da Vinci flying machine flying
+
+**Features**
++ Loading model in JSON format
+
+###Ex 6: Flying Cube
+*Codepen: http://codepen.io/Nigh7Sh4de/pen/pvgNYP note that you cannot see anything since the model isn't referenced correctly. The code DOES work if you download it.*
+
+Paul the beautiful flying machine now has proper 3D movement and rotation controls and flies through a space skybox
+
+**Features**
++ Nothing in particular :stuck_out_tongue_closed_eyes: (it's more of a cumulative experiment I guess)
+
+###Ex 7: Camera Chase Cube
+*Codepen: No Code Pen since each script must be inside of it's own file*
+
+Same as FlyingCube except now you are one with Paul. Or maybe you can think of it as being inside Paul, experiencing an intimate moement as you fly through space. Whichever seems to appeal to you more ;)
+
+**Features**
++ Scripts
++ Referencing other Entities inside scripts
