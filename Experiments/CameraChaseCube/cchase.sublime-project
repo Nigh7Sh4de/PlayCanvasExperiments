@@ -2,7 +2,12 @@
 	"folders":
 	[
 		{
-			"path": "/C/Users/Nigh7Sh4de/Programming/Github/PlayCanvasExperiments/Experiments/CameraChaseCube"
+			"follow_symlinks": true,
+			"path": "C:\\Users\\Nigh7Sh4de\\Programming\\Github\\PlayCanvasExperiments\\Experiments\\CameraChaseCube"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "."
 		}
 	]
 }

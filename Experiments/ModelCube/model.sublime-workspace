@@ -47,6 +47,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.htm",
+			"settings":
+			{
+				"buffer_size": 409,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 2003,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/TravellingCube/app.js",
+			"settings":
+			{
+				"buffer_size": 3461,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -102,6 +126,10 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ModelCube"
+	],
 	"file_history":
 	[
 		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube/README.txt",
@@ -134,6 +162,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\\n",
 			"consol",
 			"console.l",
 			"direction",
@@ -150,6 +179,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\\n",
 			"cone"
 		],
 		"reverse": false,
@@ -161,8 +191,95 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.htm",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 409,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								381,
+								381
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2003,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								519,
+								519
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/TravellingCube/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1836,
+								1929
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 545.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],

@@ -21,6 +21,8 @@ var skybox = new pc.fw.Entity();
 // Create box entity
 var cone = new pc.fw.Entity();
 
+cone.setName('cone');
+
 var url = "assets/leonardo-da-vinci-flying-machine.json";
 
 app.context.assets.loadFromUrl(url, "model").then(function (results) {
@@ -50,6 +52,19 @@ app.context.systems.model.addComponent(floor, {
 	type: "box",
 });
 
+//Create ceiling entity
+var ceil = new pc.fw.Entity();
+	app.context.systems.model.addComponent(ceil, {
+	type: "box",
+});
+
+var material = new pc.scene.PhongMaterial();
+material.diffuse = new pc.Color(1.0, 1.0, 0.0, 1.0);
+material.update();
+
+ceil.model.material = material;
+
+
 // Create camera entity
 var cam = new pc.fw.Entity();
 app.context.systems.camera.addComponent(cam, {
@@ -58,7 +73,12 @@ app.context.systems.camera.addComponent(cam, {
 
  var chaseScript = {
  	url: 'chase.js',
- 	name: 'chase'
+ 	name: 'chase',
+ 	attributes: [{
+ 		name: 'target',
+ 		type: 'string',
+ 		value: 'cone'
+ 	}]
  }
 
 app.context.systems.script.addComponent(cam, {
@@ -112,6 +132,7 @@ pc.promise.all(promises).then(function (results) {
 
 // Add to hierarchy
 app.context.root.addChild(cone);
+app.context.root.addChild(ceil);
 app.context.root.addChild(floor);
 app.context.root.addChild(cam);
 app.context.root.addChild(light);
@@ -121,8 +142,10 @@ app.context.root.addChild(skybox);
 
 
 // Set up position and orientation
-cone.setLocalPosition(0,0.5,0);
 cone.setLocalScale(0.005, 0.005, 0.005);
+cone.setLocalPosition(0,0.5,0);
+ceil.setLocalScale(2,0.1,2);
+ceil.setLocalPosition(0, 2.1, 0);
 floor.setLocalScale(2,0.1,2);
 floor.setLocalPosition(0,-0.1,0);
 cam.setLocalPosition(0, 10, 20);
@@ -133,19 +156,4 @@ light.setEulerAngles(0, 0, 30);
 // Register an update event
 app.on("update", function (dt) {
 	
-	// console.log(cam.script.target);
-// cam.script.chase.targetName = 'cone';
-
-	if (keyboard.isPressed(pc.input.KEY_LEFT)) {
-		cam.rotate(0, 100*dt, 0);
-	}
-	if (keyboard.isPressed(pc.input.KEY_RIGHT)) {
-		cam.rotate(0, -100*dt, 0);
-	}
-	if (keyboard.isPressed(pc.input.KEY_UP)) {
-		cam.rotate(-100*dt, 0, 0);
-	}
-	if (keyboard.isPressed(pc.input.KEY_DOWN)) {
-		cam.rotate(100*dt, 0, 0);
-	}
 });
