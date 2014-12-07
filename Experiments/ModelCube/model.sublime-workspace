@@ -191,7 +191,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -207,8 +207,12 @@
 						"selection":
 						[
 							[
-								381,
-								381
+								199,
+								156
+							],
+							[
+								361,
+								284
 							]
 						],
 						"settings":
@@ -219,7 +223,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -235,8 +239,8 @@
 						"selection":
 						[
 							[
-								519,
-								519
+								565,
+								565
 							]
 						],
 						"settings":
@@ -248,7 +252,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{

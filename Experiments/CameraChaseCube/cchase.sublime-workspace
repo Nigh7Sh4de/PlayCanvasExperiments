@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"target",
+				"targetEntity"
+			],
+			[
 				"translate",
 				"translateByVector"
 			],
@@ -51,7 +55,15 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 3841,
+				"buffer_size": 3644,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "move.js",
+			"settings":
+			{
+				"buffer_size": 1073,
 				"line_ending": "Windows"
 			}
 		},
@@ -59,15 +71,7 @@
 			"file": "chase.js",
 			"settings":
 			{
-				"buffer_size": 332,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.htm",
-			"settings":
-			{
-				"buffer_size": 444,
+				"buffer_size": 1165,
 				"line_ending": "Windows"
 			}
 		}
@@ -111,7 +115,11 @@
 	},
 	"console":
 	{
-		"height": 216.0
+		"height": 216.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
 	},
 	"distraction_free":
 	{
@@ -122,8 +130,14 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/CameraChaseCube"
+	],
 	"file_history":
 	[
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/CameraChaseCube/index.htm",
+		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/SpinningCube/app.js",
 		"/C/Users/Nigh7Sh4de/Downloads/engine-master/engine-master/examples/load_model/index.html",
 		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube/README.txt",
 		"/C/Users/Nigh7Sh4de/Github/PlayCanvasExperiments/Experiments/ForwardCube/app.js",
@@ -191,17 +205,18 @@
 				{
 					"buffer": 0,
 					"file": "app.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3841,
+						"buffer_size": 3644,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1391,
-								1391
+								0,
+								3644
 							]
 						],
 						"settings":
@@ -210,25 +225,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2003.0,
+						"translation.y": 1615.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "chase.js",
+					"file": "move.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 332,
+						"buffer_size": 1073,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								113,
-								113
+								807,
+								807
 							]
 						],
 						"settings":
@@ -241,32 +258,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "index.htm",
+					"file": "chase.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 444,
+						"buffer_size": 1165,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								96,
-								96
+								0,
+								1165
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -311,6 +333,7 @@
 	{
 		"height": 0.0
 	},
+	"project": "cchase.sublime-project",
 	"replace":
 	{
 		"height": 62.0
@@ -332,10 +355,25 @@
 		],
 		"width": 0.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 150.0,
-	"status_bar_visible": true
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }

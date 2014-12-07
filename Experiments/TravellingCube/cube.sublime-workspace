@@ -19,7 +19,7 @@
 			"file": "index.htm",
 			"settings":
 			{
-				"buffer_size": 441,
+				"buffer_size": 331,
 				"line_ending": "Windows"
 			}
 		},
@@ -27,7 +27,7 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 1162,
+				"buffer_size": 3461,
 				"line_ending": "Windows"
 			}
 		},
@@ -150,7 +150,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 441,
+						"buffer_size": 331,
 						"regions":
 						{
 						},
@@ -178,15 +178,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1162,
+						"buffer_size": 3461,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								494,
-								494
+								79,
+								79
 							]
 						],
 						"settings":
