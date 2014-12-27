@@ -7,12 +7,6 @@ var app = new pc.fw.Application(canvas, {
 	keyboard: new pc.input.Keyboard(canvas)
 });
 
-// var app = new pc.fw.Application(canvas, {});
-// var keyboard = new pc.input.Keyboard(canvas);
-// var mouse = new pc.input.Mouse(canvas);
-
-
-
 app.start();
 
 // Fill the available space at full resolution
