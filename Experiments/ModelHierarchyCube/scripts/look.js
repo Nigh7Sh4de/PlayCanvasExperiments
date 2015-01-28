@@ -1,6 +1,6 @@
 pc.script.create("look", function (context) {
 
-    const MULT = 0.5;
+    const MULT = 0.25;
 
     var lookScript = function (entity) {
         this.entity = entity;
@@ -11,6 +11,7 @@ pc.script.create("look", function (context) {
         this.ey = angles.y;
 
         context.mouse.on(pc.input.EVENT_MOUSEMOVE, this.onMouseMove, this);
+        context.mouse.on(pc.input.EVENT_MOUSEDOWN, this.onMouseDown, this);
     };
 
     lookScript.prototype = {
@@ -19,7 +20,7 @@ pc.script.create("look", function (context) {
         },
 
         update: function (dt) {
-            this.entity.setLocalEulerAngles(this.ex, this.ey, 0);
+            this.entity.setEulerAngles(this.ex, this.ey, 0);
         },
 
         onMouseMove: function (event) {
@@ -27,7 +28,16 @@ pc.script.create("look", function (context) {
             this.ex = pc.math.clamp(this.ex, -90, 90);
             this.ey -= event.dx * MULT;
 
-            this.entity.setLocalEulerAngles(this.ex, this.ey, 0);
+            //            this.entity.setLocalEulerAngles(this.ex, this.ey, 0);
+        },
+
+        onMouseDown: function (event) {
+            // When the mouse button is clicked try and capture the pointer
+            console.log('mouse clicked');
+            if (!pc.Mouse.isPointerLocked()) {
+                console.log('Attempting to lock point');
+                context.mouse.enablePointerLock();
+            }
         }
 
     };

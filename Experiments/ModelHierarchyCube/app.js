@@ -55,6 +55,16 @@ app.context.systems.script.addComponent(gun, {
     scripts: [lookScript]
 });
 
+var moveScript = {
+    name: 'move',
+    url: 'scripts/move.js'
+}
+
+app.context.systems.script.addComponent(tank, {
+    enable: true,
+    scripts: [moveScript]
+});
+
 
 // Create camera entity
 var cam = new pc.fw.Entity();
@@ -82,39 +92,38 @@ cam.setLocalPosition(0, 1, 3);
 cam.rotate(0, 0, 0);
 light.setEulerAngles(45, 0, 0);
 
+canvas.requestPointerLock = canvas.requestPointerLock ||
+    canvas.mozRequestPointerLock ||
+    canvas.webkitRequestPointerLock;
+// Ask the browser to lock the pointer
+canvas.requestPointerLock();
+//
+//// Ask the browser to release the pointer
+//document.exitPointerLock = document.exitPointerLock ||
+//    document.mozExitPointerLock ||
+//    document.webkitExitPointerLock;
+//document.exitPointerLock();
+
 // Register an update event
-app.on("update", function (dt) {
-
-    var rotateTarget = cam;
-
-    if (app.context.keyboard.isPressed(pc.input.KEY_CONTROL))
-        rotateTarget = gun;
-
-    if (app.context.keyboard.isPressed(pc.input.KEY_LEFT)) {
-        rotateTarget.rotateLocal(0, 90 * dt, 0);
-    }
-    if (app.context.keyboard.isPressed(pc.input.KEY_RIGHT)) {
-        rotateTarget.rotateLocal(0, -90 * dt, 0);
-    }
-    if (app.context.keyboard.isPressed(pc.input.KEY_UP)) {
-        rotateTarget.rotateLocal(90 * dt, 0, 0);
-    }
-    if (app.context.keyboard.isPressed(pc.input.KEY_DOWN)) {
-        rotateTarget.rotateLocal(-90 * dt, 0, 0);
-    }
-
-
-    if (app.context.keyboard.isPressed(pc.input.KEY_W)) {
-        tank.translateLocal(0, 0, 1 * dt);
-    }
-    if (app.context.keyboard.isPressed(pc.input.KEY_S)) {
-        tank.translateLocal(0, 0, -1 * dt);
-    }
-    if (app.context.keyboard.isPressed(pc.input.KEY_D)) {
-        tank.rotateLocal(0, -90 * dt, 0);
-    }
-    if (app.context.keyboard.isPressed(pc.input.KEY_A)) {
-        tank.rotateLocal(0, +90 * dt, 0);
-    }
-
-});
+//app.on("update", function (dt) {
+            //
+            //
+            //    var rotateTarget = cam;
+            //
+            //    if (app.context.keyboard.isPressed(pc.input.KEY_CONTROL))
+            //        rotateTarget = gun;
+            //
+            //    if (app.context.keyboard.isPressed(pc.input.KEY_LEFT)) {
+            //        rotateTarget.rotateLocal(0, 90 * dt, 0);
+            //    }
+            //    if (app.context.keyboard.isPressed(pc.input.KEY_RIGHT)) {
+            //        rotateTarget.rotateLocal(0, -90 * dt, 0);
+            //    }
+            //    if (app.context.keyboard.isPressed(pc.input.KEY_UP)) {
+            //        rotateTarget.rotateLocal(90 * dt, 0, 0);
+            //    }
+            //    if (app.context.keyboard.isPressed(pc.input.KEY_DOWN)) {
+            //        rotateTarget.rotateLocal(-90 * dt, 0, 0);
+            //    }
+            //
+            //});
