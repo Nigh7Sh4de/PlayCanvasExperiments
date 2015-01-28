@@ -14,17 +14,17 @@ pc.script.create("chase", function (context) {
         },
 
         update: function (dt) {
-            
+
 
             if (JSON.stringify(this.targetRotation) !== JSON.stringify(this.targetEntity.getLocalRotation()) ||
                 JSON.stringify(this.targetPosition) !== JSON.stringify(this.targetEntity.getPosition())) {
+
                 this.entity.setLocalRotation(this.targetEntity.getLocalRotation());
                 this.entity.rotateLocal(0, 180, 0);
 
                 this.entity.setPosition(this.targetEntity.getPosition());
-
-                this.entity.translateLocal(0, 0.5, 0.3);
-                this.entity.rotateLocal(-30, 0, 0);
+                this.entity.translateLocal(0, 0, 0.3);
+                //                this.entity.rotateLocal(-30, 0, 0);
             }
 
             this.targetPosition = this.targetEntity.getPosition().clone();

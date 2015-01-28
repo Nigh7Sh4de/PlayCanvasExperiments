@@ -1,6 +1,6 @@
 pc.script.create("move", function (context) {
 
-    const MULT =  5;
+    const MULT = 5;
 
     var moveScript = function (entity) {
         this.entity = entity;
@@ -9,7 +9,8 @@ pc.script.create("move", function (context) {
 
     moveScript.prototype = {
         initialize: function () {
-            this.initY = this.targetEntity.getPosition().y;
+            this.initY = this.entity.getPosition().y;
+            console.log(this.initY);
         },
 
         update: function (dt) {
@@ -17,16 +18,16 @@ pc.script.create("move", function (context) {
             var initPos = this.entity.getPosition().clone();
 
             if (context.keyboard.isPressed(pc.input.KEY_W)) {
-                this.entity.translateLocal(0, 0, +dt*MULT);
+                this.entity.translateLocal(0, 0, +dt * MULT);
             }
             if (context.keyboard.isPressed(pc.input.KEY_S)) {
-                this.entity.translateLocal(0, 0, -dt*MULT);
+                this.entity.translateLocal(0, 0, -dt * MULT);
             }
             if (context.keyboard.isPressed(pc.input.KEY_A)) {
-                this.entity.translateLocal(+dt*MULT, 0, 0);
+                this.entity.translateLocal(+dt * MULT, 0, 0);
             }
             if (context.keyboard.isPressed(pc.input.KEY_D)) {
-                this.entity.translateLocal(-dt*MULT, 0, 0);
+                this.entity.translateLocal(-dt * MULT, 0, 0);
             }
 
             var finalPos = this.entity.getPosition().clone();

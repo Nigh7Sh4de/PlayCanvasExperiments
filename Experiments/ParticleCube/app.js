@@ -3,8 +3,8 @@ var canvas = document.getElementById("application-canvas");
 canvas.focus();
 
 var app = new pc.fw.Application(canvas, {
-	mouse: new pc.input.Mouse(canvas),
-	keyboard: new pc.input.Keyboard(canvas)
+    mouse: new pc.input.Mouse(canvas),
+    keyboard: new pc.input.Keyboard(canvas)
 });
 
 app.start();
@@ -30,41 +30,46 @@ cone.setName('cone');
 var url = "assets/leonardo-da-vinci-flying-machine.json";
 
 app.context.assets.loadFromUrl(url, "model").then(function (results) {
-	var model = results.resource;
-	var asset = results.asset;
+    var model = results.resource;
+    var asset = results.asset;
 
-	app.context.systems.model.addComponent(cone, {
-		type: "asset",
-		asset: asset
-	});
+    app.context.systems.model.addComponent(cone, {
+        type: "asset",
+        asset: asset
+    });
 });
 
 var moveScript = {
-	url: 'scripts/move.js',
-	name: 'move'
+    url: 'scripts/move.js',
+    name: 'move'
 }
 
 var lookScript = {
-	url: 'scripts/look.js',
-	name: 'look'
+    url: 'scripts/look.js',
+    name: 'look'
+}
+
+var shootScript = {
+    url: 'scripts/shoot.js',
+    name: 'shoot'
 }
 
 app.context.systems.script.addComponent(cone, {
-	enabled: true,
-	scripts: [moveScript, lookScript]
+    enabled: true,
+    scripts: [moveScript, lookScript, shootScript]
 });
 
 
 //Create floor entity
 var floor = new pc.fw.Entity();
 app.context.systems.model.addComponent(floor, {
-	type: "box",
+    type: "box",
 });
 
 //Create ceiling entity
 var ceil = new pc.fw.Entity();
-	app.context.systems.model.addComponent(ceil, {
-	type: "box",
+app.context.systems.model.addComponent(ceil, {
+    type: "box",
 });
 
 var material = new pc.scene.PhongMaterial();
@@ -77,28 +82,28 @@ ceil.model.material = material;
 // Create camera entity
 var cam = new pc.fw.Entity();
 app.context.systems.camera.addComponent(cam, {
-	clearColor: [0.3,0.3,0.3]
+    clearColor: [0.3, 0.3, 0.3]
 });
 
 var chaseScript = {
-	url: 'scripts/chase.js',
-	name: 'chase',
-	attributes: [{
-		name: 'target',
-		type: 'string',
-		value: 'cone'
-	}]
+    url: 'scripts/chase.js',
+    name: 'chase',
+    attributes: [{
+        name: 'target',
+        type: 'string',
+        value: 'cone'
+ }]
 }
 
 app.context.systems.script.addComponent(cam, {
-	enabled: true,
-	scripts: [chaseScript]
+    enabled: true,
+    scripts: [chaseScript]
 });
 
 // Create directional light entity
 var light = new pc.fw.Entity();
 app.context.systems.light.addComponent(light, {
-	color: new pc.Color(1,1,1)
+    color: new pc.Color(1, 1, 1)
 });
 
 
@@ -116,26 +121,26 @@ var textures = [
 var promises = [];
 
 for (var i = 0; i < textures.length; i++) {
-  promises.push(app.context.assets.loadFromUrl(textures[i], "texture"));
+    promises.push(app.context.assets.loadFromUrl(textures[i], "texture"));
 }
 
 // check for all assets to load then create skybox
 pc.promise.all(promises).then(function (results) {
 
-	var floorMaterial = new pc.scene.PhongMaterial();
-	floorMaterial.diffuseMap = results[6].resource[0];
-	floorMaterial.update();
-	floor.model.model.meshInstances[0].material = floorMaterial;
+    var floorMaterial = new pc.scene.PhongMaterial();
+    floorMaterial.diffuseMap = results[6].resource[0];
+    floorMaterial.update();
+    floor.model.model.meshInstances[0].material = floorMaterial;
 
-	app.context.systems.skybox.addComponent(skybox, {
-		enabled: true,
-		posx: results[0].asset.id,
-		negx: results[1].asset.id,
-		posy: results[2].asset.id,
-		negy: results[3].asset.id,
-		posz: results[4].asset.id,
-		negz: results[5].asset.id
-	});	
+    app.context.systems.skybox.addComponent(skybox, {
+        enabled: true,
+        posx: results[0].asset.id,
+        negx: results[1].asset.id,
+        posy: results[2].asset.id,
+        negy: results[3].asset.id,
+        posz: results[4].asset.id,
+        negz: results[5].asset.id
+    });
 });
 
 
@@ -152,17 +157,17 @@ app.context.root.addChild(skybox);
 
 // Set up position and orientation
 cone.setLocalScale(0.0005, 0.0005, 0.0005);
-cone.setLocalPosition(0,0,0);
-ceil.setLocalScale(2,0.1,2);
+cone.setLocalPosition(0, 0.15, 0);
+ceil.setLocalScale(2, 0.1, 2);
 ceil.setLocalPosition(0, 2.1, 0);
-floor.setLocalScale(2,0.1,2);
-floor.setLocalPosition(0,-0.1,0);
+floor.setLocalScale(5, 0.1, 5);
+floor.setLocalPosition(0, 0, 0);
 cam.setLocalPosition(0, 10, 20);
-cam.setEulerAngles(-30,0,0);
+cam.setEulerAngles(-30, 0, 0);
 light.setEulerAngles(0, 0, 30);
 
 
 // Register an update event
 app.on("update", function (dt) {
-	
+
 });
