@@ -27,17 +27,12 @@ pc.script.create("look", function (context) {
             this.ex += event.dy * MULT;
             this.ex = pc.math.clamp(this.ex, -90, 90);
             this.ey -= event.dx * MULT;
-
-            //            this.entity.setLocalEulerAngles(this.ex, this.ey, 0);
         },
 
         onMouseDown: function (event) {
             // When the mouse button is clicked try and capture the pointer
-            console.log('mouse clicked');
-            if (!pc.Mouse.isPointerLocked()) {
-                console.log('Attempting to lock point');
+            if (!pc.Mouse.isPointerLocked())
                 context.mouse.enablePointerLock();
-            }
         }
 
     };

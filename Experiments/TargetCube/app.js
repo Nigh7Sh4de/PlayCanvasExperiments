@@ -6,7 +6,9 @@ var app = new pc.fw.Application(canvas, {
     mouse: new pc.input.Mouse(canvas),
     keyboard: new pc.input.Keyboard(canvas)
 });
-//var keyboard = new pc.input.Keyboard(window);
+
+app.context.loader._handlers['texture'].crossOrigin = 'anonymous';
+app.context.loader._handlers['model'].crossOrigin = 'anonymous';
 
 app.start();
 
@@ -14,12 +16,34 @@ app.start();
 app.setCanvasFillMode(pc.fw.FillMode.FILL_WINDOW);
 app.setCanvasResolution(pc.fw.ResolutionMode.AUTO);
 
-// Create box entity
+app.context.systems.rigidbody.setGravity(0, -10, 0);
+
+// Create camera entity
+var cam = new pc.fw.Entity();
+app.context.systems.camera.addComponent(cam, {
+    clearColor: [0.3, 0.3, 0.3]
+});
+
+cam.setLocalPosition(0, 3, -9);
+cam.rotateLocal(-5, 180, 0);
+
+// Create directional light entity
+var light = new pc.fw.Entity();
+app.context.systems.light.addComponent(light, {
+    color: new pc.Color(1, 1, 1)
+});
+
+light.setEulerAngles(45, 0, 0);
+
+
+// Create tank entity
 var tank = new pc.fw.Entity();
+tank.rotate(0, 180, 0);
 
 var base = new pc.fw.Entity();
 
 var gun = new pc.fw.Entity();
+gun.translateLocal(0, 0.55, 0);
 
 var url = "assets/Tank_base.json";
 
@@ -70,9 +94,42 @@ app.context.systems.script.addComponent(tank, {
     scripts: [moveScript]
 });
 
+tank.addChild(base);
+tank.addChild(gun);
+gun.addChild(cam);
+
+
+
+//Create a floor
+var floor = new pc.fw.Entity();
+
+//floor.setLocalScale(100, 1, 100);
+floor.setLocalScale(10, 1, 10);
+
+app.context.systems.model.addComponent(floor, {
+    type: "box",
+});
+
+app.context.systems.rigidbody.addComponent(floor, {
+    type: 'static'
+});
+
+//var scale = floor.getLocalScale().clone();
+//console.log(scale);
+//scale = scale.scale(0.5);
+//console.log(scale);
+
+app.context.systems.collision.addComponent(floor, {
+    type: 'box',
+//    halfExtents: ,
+    halfExtents: new pc.Vec3(5, 0.5, 5)
+});
+
+floor.translate(0, -0.5, 0);
+floor.rigidbody.syncEntityToBody();
 
 //Create an enemy spawner
-var spawner = new pc.fw.Entity(0);
+var spawner = new pc.fw.Entity();
 
 var spawnScript = {
     name: 'spawn',
@@ -84,11 +141,6 @@ app.context.systems.script.addComponent(spawner, {
     scripts: [spawnScript]
 });
 
-// Create camera entity
-var cam = new pc.fw.Entity();
-app.context.systems.camera.addComponent(cam, {
-    clearColor: [0.3, 0.3, 0.3]
-});
 
 // Create directional light entity
 var light = new pc.fw.Entity();
@@ -96,32 +148,29 @@ app.context.systems.light.addComponent(light, {
     color: new pc.Color(1, 1, 1)
 });
 
+    // load all textures
+var textures = [
+    "assets/Hex_Plating.png"
+];
+
+var promises = [];
+
+for (var i = 0; i < textures.length; i++) {
+  promises.push(app.context.assets.loadFromUrl(textures[i], "texture"));
+}
+
+// check for all assets to load then create skybox
+pc.promise.all(promises).then(function (results) {
+
+	var floorMaterial = new pc.scene.PhongMaterial();
+	floorMaterial.diffuseMap = results[0].resource[0];
+	floorMaterial.update();
+	floor.model.model.meshInstances[0].material = floorMaterial;
+
+});
+
+
 // Add to hierarchy
 app.context.root.addChild(tank);
-tank.addChild(base);
-tank.addChild(gun);
-//app.context.root.addChild(cam);
-gun.addChild(cam);
 app.context.root.addChild(light);
-
-// Set up position and orientation
-//tank.setLocalScale(0.001, 0.001, 0.001);
-tank.rotate(0, 180, 0);
-gun.translateLocal(0, 0.55, 0);
-cam.setLocalPosition(0, 3, -9);
-cam.rotateLocal(-5, 180, 0);
-light.setEulerAngles(45, 0, 0);
-
-
-if (keyboard.isPressed(pc.input.KEY_LEFT)) {
-    cam.rotateLocal(0, 90 * dt, 0);
-}
-if (keyboard.isPressed(pc.input.KEY_RIGHT)) {
-    cam.rotateLocal(0, -90 * dt, 0);
-}
-if (keyboard.isPressed(pc.input.KEY_UP)) {
-    cam.rotateLocal(90 * dt, 0, 0);
-}
-if (keyboard.isPressed(pc.input.KEY_DOWN)) {
-    cam.rotateLocal(-90 * dt, 0, 0);
-}
+app.context.root.addChild(floor);

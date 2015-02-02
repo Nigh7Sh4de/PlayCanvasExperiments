@@ -20,11 +20,9 @@ pc.script.create("shoot", function (context) {
 
         onMouseDown: function (event) {
             // When the mouse button is clicked try and capture the pointer
-            console.log('mouse clicked');
-            if (!pc.Mouse.isPointerLocked()) {
-                console.log('Attempting to lock point');
+            if (!pc.Mouse.isPointerLocked())
                 context.mouse.enablePointerLock();
-            } else
+            else
                 this.createBullet();
 
         },
@@ -36,8 +34,25 @@ pc.script.create("shoot", function (context) {
                 type: "box",
             });
 
+            newBullet.setRotation(this.entity.getRotation());
+            newBullet.setLocalScale(0.04, 0.04, 0.2);
+            newBullet.setPosition(this.entity.getPosition());
+            newBullet.translateLocal(0, 0.1523, 0);
+
+            context.systems.rigidbody.addComponent(newBullet, {
+                type: 'dynamic',
+                mass: 0.1,
+                restitution: 0.5
+            });
+
+            app.context.systems.collision.addComponent(newBullet, {
+                type: "box",
+                halfExtents: newBullet.getLocalScale()
+            });
+
+
             var material = new pc.scene.PhongMaterial();
-            material.diffuse = new pc.Color(0.0, 1.0, 0.0, 1.0);
+            material.diffuse = new pc.Color(0.0, 0.5, 0.0, 1.0);
             material.update();
 
             newBullet.model.material = material;
@@ -55,10 +70,6 @@ pc.script.create("shoot", function (context) {
 
             context.root.addChild(newBullet);
 
-            newBullet.setRotation(this.entity.getRotation());
-            newBullet.setLocalScale(0.04, 0.04, 0.2);
-            newBullet.setPosition(this.entity.getPosition());
-            newBullet.translateLocal(0, 0.1523, 0);
         }
     };
 
