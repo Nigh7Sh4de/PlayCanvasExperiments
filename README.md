@@ -1,7 +1,7 @@
 PlayCanvasExperiments
 =====================
 
-Just some small experiments with the PlayCanvas graphics engine 
+Just some small experiments with the PlayCanvas game engine 
 
 ###Ex 1: Spinning Cube
 *Codepen: http://codepen.io/Nigh7Sh4de/pen/vEYzeP*
