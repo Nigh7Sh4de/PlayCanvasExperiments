@@ -20,12 +20,14 @@ var State = Immutable.Record({
 // state = state.set('elements', state.elements.push(element))
 
 var state = {
+  version: 0,
   elements: {
-    cube: {
-      position: [0, 0, 0],
-      rotation: [0, 0, 0]
-    }
+    cubes: []
   }
+}
+
+for (var i=0; i < 100; i++) {
+    state.elements.cubes.push({position: [0, 0, 0], rotate: [0, 0, ]})
 }
 
 app.use(express.static(__dirname))
@@ -34,18 +36,28 @@ app.get('/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
 });
 
+
 io.on('connection', function (socket) {
-  var rotate = () => {
-    state.elements.cube.position[0] += 0.05;
-    if (state.elements.cube.position[0] > 5)
-      state.elements.cube.position[0] = -5;
-    state.elements.cube.position[1] += 0.05;
-    if (state.elements.cube.position[1] > 1)
-      state.elements.cube.position[1] = -1;
-    state.elements.cube.position[2] += 0.05;
-    if (state.elements.cube.position[2] > 1)
-      state.elements.cube.position[2] = -1;
-    socket.emit('NEW_STATE', state)
+  var emitState = () => {
+      state.version++;
+      socket.emit('NEW_STATE', state)
   }
-  setInterval(rotate, 15);
+
+  var rotate = () => {
+    state.elements.cubes.forEach(cube => {
+      cube.position[0] += 0.05;
+      if (cube.position[0] > 5)
+        cube.position[0] = -5;
+      cube.position[1] += 0.05;
+      if (cube.position[1] > 1)
+        cube.position[1] = -1;
+      cube.position[2] += 0.05;
+      if (cube.position[2] > 1)
+        cube.position[2] = -1;
+    })  
+    emitState();
+    setTimeout(rotate);
+  }
+  rotate();
+  // setInterval(rotate, 10);
 });
